@@ -142,12 +142,13 @@ a {
 .gray_card,
 .black_card,
 .lemon_card {
-  max-width: 600px;
+  width: 600px;
   height: 310px;
   border-radius: 50px;
   padding: 30px 30px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 30px;
   border: 1px solid var(--black-500);
 }
@@ -168,15 +169,23 @@ a {
   justify-content: space-between;
 }
 
-.gray_card h3  {
-  display: inline;
+.gray_card span,
+.lemon_card span,
+.black_card span {
+  font-size: 25px;
+}
+
+.gray_card span {
+  display: inline-block;
   background-color: var(--lemon);
 }
-.lemon_card h3  {
+.lemon_card span {
+  display: inline-block;
   background-color: var(--gray);
 }
 
-.black_card h3  {
+.black_card span {
+  display: inline-block;
   background-color: var(--white);
 }
 
@@ -203,8 +212,54 @@ a {
   width: 100px;
   background-color: transparent;
   border: none;
+  font-size: 17px;
+  white-space: nowrap;
+  font-weight: 300;
 }
 
 .black_card button {
-  color: var(--white)
+  color: var(--white);
+}
+
+.header span:nth-child(1) {
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 12px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 3px 6px;
+}
+
+.header span:last-child {
+  padding: 3px 6px;
+  border-radius: 8px;
+}
+
+.rounded_black img, .rounded_white img {
+  width: 20px;
+  height: 20px;
+}
+
+.rounded_black, .rounded_white {
+ width: 50px;
+  display: inline-flex;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.rounded_black {
+  background-color: var(--black-500);
+}
+.rounded_white {
+  background-color: var(--white);
+}
+
+
+.card_top .bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
